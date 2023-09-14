@@ -1,0 +1,42 @@
+// Number guessing game
+#include<iostream>
+#include<ctime>
+using namespace std;
+int main()
+{
+    srand(time(0));
+    int input;
+    char inputuser;
+ int variable=rand()%100+1;
+ int count=0;
+while(inputuser!='N')
+{
+    cout<<"Input the number"<<endl;
+    cin>>input;
+    if(input==variable)
+    {
+        cout<<"congratulations you guess the right number"<<endl;
+
+    }
+    else{
+        if(input>variable)
+        {
+            cout<<"guess low"<<endl;
+        }
+        else
+        {
+            cout<<"guess high"<<endl;
+        }
+        count++;
+      cout<<count;
+      cout<<endl;
+    }
+    if(count==10)
+    {
+    cout<<"input by user Y/N"<<endl;
+     cin>>inputuser;
+     cout<<endl;
+}
+}
+return 0;
+}
